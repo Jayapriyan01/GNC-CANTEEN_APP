@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flasho-server
+    env: node
+    plan: free
+    branch: main
+    root: server
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
