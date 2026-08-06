@@ -1,0 +1,30 @@
+[
+  {
+    "roll": "21CS001",
+    "name": "Demo Student",
+    "email": "student@flasho.com",
+    "passwordHash": "$2b$10$AzO3hfnkZvy/FVwIRUSyMeEnJv4R0Q2a4bRfoxnURdGqpWk0VDu1O",
+    "createdAt": "2026-07-29T05:32:44.250Z"
+  },
+  {
+    "roll": "80838",
+    "name": "Admin User",
+    "email": "admin@flasho.com",
+    "passwordHash": "$2b$10$COZ2NVJRgw/mYh07QuFlK.C28.BToy/4ukFZK3RPEzCp8k/Rl2VKG",
+    "createdAt": "2026-07-29T05:32:44.316Z"
+  },
+  {
+    "roll": "80808",
+    "name": "hari haran",
+    "email": null,
+    "passwordHash": "$2b$10$.fmZT91xiS9EflfzcNXeyeYUYhJFgYCW0rnkPpFyrLHjiWqYdWs/W",
+    "createdAt": "2026-07-29T08:06:13.070Z"
+  },
+  {
+    "roll": "2413141033089",
+    "name": "koji",
+    "email": null,
+    "passwordHash": "$2b$10$Uu9ChVJmnsx2OVsFNh4UH.eH98V.3SOi5wNUU1pzLIaoWQTGy3Odi",
+    "createdAt": "2026-08-02T15:43:23.696Z"
+  }
+]

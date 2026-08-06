@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flasho — Skip the queue. Eat in peace.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="glow glow--tl"></div>
+<div class="glow glow--tr"></div>
+<div class="glow glow--bl"></div>
+<div class="glow glow--br"></div>
+
+<!-- ============ LOGIN PAGE ============ -->
+<section class="page active" id="page-login">
+  <div class="login-wrap">
+    <div class="pill-badge">
+      <span class="dots"><span></span><span></span><span></span><span></span></span>
+      4 CANTEENS • 1 APP
+    </div>
+    <h1 class="brand-logo" align="center" style="text-transform: uppercase;">GNC</h1>
+    <p class="brand-tagline" align="center">Skip the queue. Eat in peace.</p>
+
+    <form class="login-card" id="loginForm" autocomplete="off">
+      <div class="login-head">
+        <h2>Welcome back</h2>
+        <div class="auth-switch" role="tablist" aria-label="Login type">
+          <button type="button" class="auth-switch__btn active" data-auth-mode="student" data-view="login">Student</button>
+          <button type="button" class="auth-switch__btn" data-auth-mode="staff" data-view="login">Staff</button>
+          <button type="button" class="auth-switch__btn" data-auth-mode="admin" data-view="login">Admin</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="loginIdentifier" id="loginIdentifierLabel">Register no.</label>
+        <input type="text" id="loginIdentifier" placeholder="e.g. 21CS045" autocomplete="username" required>
+      </div>
+
+      <div class="field">
+        <label for="loginPassword" id="loginPasswordLabel">Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <p class="field-error" id="loginError"></p>
+
+      <button type="submit" class="enter-btn"> Log in <span class="arrow">→</span></button>
+
+      <div class="login-links">
+        <a href="#" id="forgotLink">Forgot password?</a>
+        <a href="#" id="createLink">Create account</a>
+      </div>
+    </form>
+
+    <div class="login-footer">
+      <span>Bhojan</span><span class="sep">•</span>
+      <span>AMRIT</span><span class="sep">•</span>
+      <span>CoffeeKudi</span><span class="sep">•</span>
+      <span>SaiSri</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMIN LOGIN PAGE ============ -->
+<section class="page" id="page-admin-login">
+  <div class="login-wrap">
+    <div class="pill-badge">
+      <span class="dots"><span></span><span></span><span></span><span></span></span>
+      ADMIN ACCESS
+    </div>
+    <h1 class="brand-logo" align="center" style="text-transform: uppercase;">GNC</h1>
+    <p class="brand-tagline" align="center">Sign in to manage orders and revenue.</p>
+
+    <form class="login-card" id="adminLoginForm" autocomplete="off">
+      <div class="login-head">
+        <h2>Admin sign in</h2>
+      </div>
+
+      <div class="field">
+        <label for="adminIdentifier">Email</label>
+        <input type="email" id="adminIdentifier" placeholder="e.g. admin@flasho.com" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <p class="field-error" id="adminLoginError"></p>
+
+      <button type="submit" class="enter-btn"> Sign in <span class="arrow">→</span></button>
+
+      <div class="login-links">
+        <a href="#" id="adminBackLink">Back to login</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ SIGNUP PAGE ============ -->
+<section class="page" id="page-signup">
+  <div class="login-wrap">
+    <div class="pill-badge">
+      <span class="dots"><span></span><span></span><span></span><span></span></span>
+      4 CANTEENS • 1 APP
+    </div>
+    <h1 class="brand-logo" align="center" style="text-transform: uppercase;">GNC</h1>
+    <p class="brand-tagline" align="center">Create your account and skip the queue.</p>
+
+    <form class="login-card" id="signupForm">
+      <div class="login-head">
+        <h2>Create account</h2>
+        <div class="auth-switch" role="tablist" aria-label="Account type">
+          <button type="button" class="auth-switch__btn active" data-auth-mode="student" data-view="signup">Student</button>
+          <button type="button" class="auth-switch__btn" data-auth-mode="staff" data-view="signup">Staff</button>
+        </div>
+      </div>
+
+      <div class="field" id="signupNameField">
+        <label for="signupName">Name</label>
+        <input type="text" id="signupName" placeholder="e.g. Asha Kumar" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="signupIdentifier" id="signupIdentifierLabel">Register no.</label>
+        <input type="text" id="signupIdentifier" placeholder="e.g. 21CS045" autocomplete="username" required>
+      </div>
+
+      <div class="field">
+        <label for="signupPassword" id="signupPasswordLabel">Password</label>
+        <input type="password" id="signupPassword" placeholder="••••••••" autocomplete="new-password" required>
+      </div>
+      <p class="field-error" id="signupError"></p>
+
+      <button type="submit" class="enter-btn">Create account <span class="arrow">→</span></button>
+
+      <div class="login-links">
+        <a href="#" id="backToLoginLink">Back to login</a>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- ============ FORGOT PASSWORD PAGE ============ -->
+<section class="page" id="page-forgot">
+  <div class="login-wrap">
+    <div class="pill-badge">
+      <span class="dots"><span></span><span></span><span></span><span></span></span>
+      4 CANTEENS • 1 APP
+    </div>
+    <h1 class="brand-logo" align="center" style="text-transform: uppercase;">GNC</h1>
+    <p class="brand-tagline" align="center">Reset your password with a quick OTP flow.</p>
+
+    <form class="login-card" id="forgotForm" autocomplete="off">
+      <div class="login-head">
+        <h2>Reset password</h2>
+        <div class="auth-switch" role="tablist" aria-label="Reset password type">
+          <button type="button" class="auth-switch__btn active" data-auth-mode="student" data-view="forgot">Student</button>
+          <button type="button" class="auth-switch__btn" data-auth-mode="staff" data-view="forgot">Staff</button>
+        </div>
+      </div>
+
+      <div class="field" id="forgotNameField">
+        <label for="forgotName">Name</label>
+        <input type="text" id="forgotName" placeholder="e.g. Asha Kumar" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="forgotIdentifier" id="forgotIdentifierLabel">Register no.</label>
+        <input type="text" id="forgotIdentifier" placeholder="e.g. 21CS045" autocomplete="username">
+      </div>
+
+      <div class="field" id="forgotPhoneField">
+        <label for="forgotPhone">Phone no.</label>
+        <input type="tel" id="forgotPhone" placeholder="e.g. +91 98765 43210" autocomplete="tel">
+      </div>
+
+      <p class="field-error" id="forgotError"></p>
+
+      <div id="forgotRequestStage">
+        <button type="submit" class="enter-btn">Get OTP <span class="arrow">→</span></button>
+      </div>
+
+      <div class="login-links">
+        <a href="#" id="backToLoginLink">Back to login</a>
+      </div>
+    </form>
+
+    <div id="forgotOtpStage" class="otp-modal-overlay hidden">
+      <div class="otp-panel">
+        <p class="otp-instruction">Enter the 4-digit code we sent to your phone.</p>
+        <div class="otp-code" aria-label="OTP code">
+          <input type="text" inputmode="numeric" maxlength="1" class="otp-input" id="otpDigit1" autocomplete="one-time-code">
+          <input type="text" inputmode="numeric" maxlength="1" class="otp-input" id="otpDigit2" autocomplete="one-time-code">
+          <input type="text" inputmode="numeric" maxlength="1" class="otp-input" id="otpDigit3" autocomplete="one-time-code">
+          <input type="text" inputmode="numeric" maxlength="1" class="otp-input" id="otpDigit4" autocomplete="one-time-code">
+        </div>
+        <p class="field-success hidden" id="forgotSuccess">Password changed.</p>
+        <button type="button" class="enter-btn" id="forgotVerifyBtn">Verify OTP <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ HOME PAGE ============ -->
+<section class="page" id="page-home">
+  <div class="home-wrap">
+    <header class="topbar">
+      <div>
+        <h1 class="title">Where are you eating today?</h1>
+        <p class="subtitle">"Skip the line, taste the moment."</p>
+      </div>
+      <div class="home-actions">
+        <button class="ghost-btn" id="myOrdersBtn" type="button">My Orders</button>
+        <button class="ghost-btn" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </header>
+
+    <section class="canteen-grid">
+      <button class="canteen-card canteen-card--bhojan" data-target="page-bhojan" type="button">
+        <span class="tag">Canteen</span>
+        <h2 class="canteen-name">Bhojan</h2>
+        <p class="canteen-desc">Homely Indian thalis &amp; curries</p>
+        <div class="card-footer">
+          <span class="status"><i class="dot"></i>Open now</span>
+          <span class="card-order-btn order-btn--dark">Order <span class="arrow">→</span></span>
+        </div>
+      </button>
+
+      <button class="canteen-card canteen-card--amrit" data-target="page-amrit" type="button">
+        <span class="tag">Canteen</span>
+        <h2 class="canteen-name">Amrit's Cafe</h2>
+        <p class="canteen-desc">Snacks, rolls &amp; fiery bites</p>
+        <div class="card-footer">
+          <span class="status"><i class="dot"></i>Open now</span>
+          <span class="card-order-btn order-btn--light">Order <span class="arrow">→</span></span>
+        </div>
+      </button>
+
+      <button class="canteen-card canteen-card--coffeekudi" data-target="page-coffeekudi" type="button">
+        <span class="tag">Canteen</span>
+        <h2 class="canteen-name">Kaapi Kudil</h2>
+        <p class="canteen-desc">Filter coffee &amp; quick bites</p>
+        <div class="card-footer">
+          <span class="status"><i class="dot"></i>Open now</span>
+          <span class="card-order-btn order-btn--dark">Order <span class="arrow">→</span></span>
+        </div>
+      </button>
+
+      <button class="canteen-card canteen-card--saisri" data-target="page-saisri" type="button">
+        <span class="tag">Canteen</span>
+        <h2 class="canteen-name">Sai Canteen</h2>
+        <p class="canteen-desc">South Indian tiffin &amp; sweets</p>
+        <div class="card-footer">
+          <span class="status"><i class="dot"></i>Open now</span>
+          <span class="card-order-btn order-btn--light">Order <span class="arrow">→</span></span>
+        </div>
+      </button>
+    </section>
+  </div>
+</section>
+
+<!-- ============ MY ORDERS PAGE ============ -->
+<section class="page" id="page-my-orders">
+  <div class="orders-wrap">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Order history</p>
+        <h1 class="title">My Orders</h1>
+        <p class="subtitle">Review every order, track status, and open details instantly.</p>
+      </div>
+      <div class="admin-actions">
+        <button class="ghost-btn" id="myOrdersRefreshBtn" type="button">Refresh</button>
+        <button class="ghost-btn" id="myOrdersBackBtn" type="button">Back</button>
+      </div>
+    </header>
+
+    <div class="orders-filter-grid">
+      <div class="field">
+        <label for="myOrdersSearchInput">Search by order ID</label>
+        <input type="search" id="myOrdersSearchInput" placeholder="Search by order ID" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="myOrdersStatusFilter">Filter by status</label>
+        <select id="myOrdersStatusFilter">
+          <option value="all">All statuses</option>
+          <option value="awaiting_payment">Awaiting Payment</option>
+          <option value="accepted">Accepted</option>
+          <option value="preparing">Preparing</option>
+          <option value="ready">Ready for Pickup</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="myOrdersDateFrom">From date</label>
+        <input type="date" id="myOrdersDateFrom">
+      </div>
+      <div class="field">
+        <label for="myOrdersDateTo">To date</label>
+        <input type="date" id="myOrdersDateTo">
+      </div>
+    </div>
+
+    <div class="orders-summary">
+      <p id="myOrdersCount">0 orders found</p>
+    </div>
+
+    <div class="orders-list" id="myOrderList">
+      <div class="orders-empty-state">
+        <div class="orders-illustration" aria-hidden="true">
+          <div class="illustration-circle"></div>
+          <div class="illustration-line"></div>
+          <div class="illustration-dot"></div>
+        </div>
+        <p>No orders yet</p>
+        <span>Start ordering from any canteen and track your orders from here.</span>
+      </div>
+    </div>
+
+    <div class="pagination-row">
+      <button class="ghost-btn" id="myOrdersPrevBtn" type="button">Previous</button>
+      <span id="myOrdersPageInfo">Page 1</span>
+      <button class="ghost-btn" id="myOrdersNextBtn" type="button">Next</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDER DETAILS MODAL ============ -->
+<div class="order-details-modal hidden" id="orderDetailsModal" aria-modal="true" role="dialog">
+  <div class="order-details-panel">
+    <button class="modal-close" id="orderDetailsCloseBtn" type="button">×</button>
+    <div class="order-details-header">
+      <p class="eyebrow">Order details</p>
+      <h2 id="detailOrderId">Order #XXXX</h2>
+      <p class="subtitle" id="detailOrderDate">Placed on </p>
+    </div>
+    <div class="order-details-grid">
+      <div class="order-detail-block">
+        <span>Name</span>
+        <strong id="detailCustomerName">—</strong>
+      </div>
+      <div class="order-detail-block">
+        <span>Canteen</span>
+        <strong id="detailCanteen">—</strong>
+      </div>
+      <div class="order-detail-block">
+        <span>Order status</span>
+        <strong id="detailStatus">—</strong>
+      </div>
+      <div class="order-detail-block">
+        <span>Payment status</span>
+        <strong id="detailPaymentStatus">—</strong>
+      </div>
+      <div class="order-detail-block">
+        <span>Estimated prep time</span>
+        <strong id="detailEstimate">—</strong>
+      </div>
+    </div>
+    <div class="order-items-panel">
+      <h3>Ordered items</h3>
+      <div class="order-items-detail" id="detailItemList"></div>
+    </div>
+    <div class="order-total-panel">
+      <span>Grand total</span>
+      <strong id="detailGrandTotal">₹0</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ============ OWNER DASHBOARD ============ -->
+<section class="page" id="page-owner">
+  <div class="owner-wrap">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Owner Dashboard</p>
+        <h1 class="title" id="ownerTitle">Order queue</h1>
+        <p class="subtitle">Receive and manage orders placed for your canteen.</p>
+      </div>
+      <div class="owner-actions">
+        <button class="ghost-btn" id="ownerRefreshBtn" type="button">Refresh orders</button>
+        <button class="ghost-btn" id="ownerLogoutBtn" type="button">Logout</button>
+      </div>
+    </header>
+
+    <div class="owner-summary">
+      <span id="ownerOrdersCount">0 orders</span>
+      <p class="owner-note">Orders appear as soon as students or staff place them.</p>
+    </div>
+
+    <div class="owner-orders" id="ownerOrderList">
+      <div class="owner-empty-state">
+        <p>No orders yet. Refresh to check again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMIN DASHBOARD ============ -->
+<section class="page" id="page-admin">
+  <div class="admin-wrap">
+    <header class="topbar admin-topbar">
+      <div>
+        <p class="eyebrow">Admin Dashboard</p>
+        <h1 class="title">Flasho Insights</h1>
+        <p class="subtitle">Manage orders, track revenue, and review student order details.</p>
+      </div>
+      <div class="admin-actions">
+        <button class="ghost-btn" id="adminRefreshBtn" type="button">Refresh</button>
+        <button class="ghost-btn" id="adminLogoutBtn" type="button">Logout</button>
+      </div>
+    </header>
+
+    <div class="admin-stats" id="adminStats">
+      <article class="admin-card">
+        <p>Total orders</p>
+        <strong id="adminTotalOrders">0</strong>
+      </article>
+      <article class="admin-card">
+        <p>Pending orders</p>
+        <strong id="adminPendingOrders">0</strong>
+      </article>
+      <article class="admin-card">
+        <p>Preparing orders</p>
+        <strong id="adminPreparingOrders">0</strong>
+      </article>
+      <article class="admin-card">
+        <p>Ready orders</p>
+        <strong id="adminReadyOrders">0</strong>
+      </article>
+      <article class="admin-card">
+        <p>Completed orders</p>
+        <strong id="adminCompletedOrders">0</strong>
+      </article>
+      <article class="admin-card admin-card--cancelled">
+        <p>Cancelled orders</p>
+        <strong id="adminCancelledOrders">0</strong>
+      </article>
+      <article class="admin-card admin-card--revenue">
+        <p>Total revenue</p>
+        <strong id="adminTotalRevenue">₹0</strong>
+      </article>
+    </div>
+
+    <div class="admin-filter-bar">
+      <div class="field admin-search-field">
+        <label for="adminSearchInput">Search orders</label>
+        <input type="search" id="adminSearchInput" placeholder="Search by order ID, student, email, canteen" autocomplete="off">
+      </div>
+      <div class="field admin-select-field">
+        <label for="adminStatusFilter">Filter by status</label>
+        <select id="adminStatusFilter">
+          <option value="all">All statuses</option>
+          <option value="awaiting_payment">Pending</option>
+          <option value="accepted">Accepted</option>
+          <option value="preparing">Preparing</option>
+          <option value="ready">Ready</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="admin-orders-wrapper">
+      <div class="admin-orders-header">
+        <h2>Recent orders</h2>
+        <p id="adminOrdersCount">0 orders</p>
+      </div>
+      <div class="admin-orders" id="adminOrderList">
+        <div class="admin-empty-state"><p>No orders found. Refresh to fetch the latest activity.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BHOJAN MENU ============ -->
+<section class="page menu-page theme-bhojan" id="page-bhojan">
+  <div class="menu-inner">
+    <div class="menu-topbar">
+      <button class="back-btn" data-back type="button"><span>←</span> All canteens</button>
+      <span class="break-badge">BREAK TIME <span class="timer-mmss">20:00</span></span>
+    </div>
+    <div class="menu-header">
+      <p class="menu-eyebrow">Flasho • Canteen</p>
+      <h1 class="menu-name">Bhojan</h1>
+      <p class="menu-desc">Homely Indian thalis &amp; curries</p>
+    </div>
+    <div class="menu-section-head">
+      <h3>Menu</h3>
+      <span class="item-count">14 items</span>
+    </div>
+    <div class="menu-grid" data-menu="bhojan"></div>
+  </div>
+</section>
+
+<!-- ============ AMRIT CAFE MENU ============ -->
+<section class="page menu-page theme-amrit" id="page-amrit">
+  <div class="menu-inner">
+    <div class="menu-topbar">
+      <button class="back-btn" data-back type="button"><span>←</span> All canteens</button>
+      <span class="break-badge">BREAK TIME <span class="timer-mmss">20:00</span></span>
+    </div>
+    <div class="menu-header">
+      <p class="menu-eyebrow">Flasho • Canteen</p>
+      <h1 class="menu-name">AMRIT Cafe</h1>
+      <p class="menu-desc">Snacks, rolls &amp; fiery bites</p>
+    </div>
+    <div class="menu-section-head">
+      <h3>Menu</h3>
+      <span class="item-count">14 items</span>
+    </div>
+    <div class="menu-grid" data-menu="amrit"></div>
+  </div>
+</section>
+
+<!-- ============ COFFEEKUDI MENU ============ -->
+<section class="page menu-page theme-coffeekudi" id="page-coffeekudi">
+  <div class="menu-inner">
+    <div class="menu-topbar">
+      <button class="back-btn" data-back type="button"><span>←</span> All canteens</button>
+      <span class="break-badge">BREAK TIME <span class="timer-mmss">20:00</span></span>
+    </div>
+    <div class="menu-header">
+      <p class="menu-eyebrow">Flasho • Canteen</p>
+      <h1 class="menu-name">CoffeeKudi</h1>
+      <p class="menu-desc">Filter coffee &amp; quick bites</p>
+    </div>
+    <div class="menu-section-head">
+      <h3>Menu</h3>
+      <span class="item-count">10 items</span>
+    </div>
+    <div class="menu-grid" data-menu="coffeekudi"></div>
+  </div>
+</section>
+
+<!-- ============ SAI SRI MENU ============ -->
+<section class="page menu-page theme-saisri" id="page-saisri">
+  <div class="menu-inner">
+    <div class="menu-topbar">
+      <button class="back-btn" data-back type="button"><span>←</span> All canteens</button>
+      <span class="break-badge">BREAK TIME <span class="timer-mmss">20:00</span></span>
+    </div>
+    <div class="menu-header">
+      <p class="menu-eyebrow">Flasho • Canteen</p>
+      <h1 class="menu-name">Sai Sri</h1>
+      <p class="menu-desc">South Indian tiffin &amp; sweets</p>
+    </div>
+    <div class="menu-section-head">
+      <h3>Menu</h3>
+      <span class="item-count">10 items</span>
+    </div>
+    <div class="menu-grid" data-menu="saisri"></div>
+  </div>
+</section>
+
+<!-- ============ TIME SLOT PAGE ============ -->
+<section class="page" id="page-timeslot">
+  <div class="checkout-wrap">
+    <div class="menu-topbar">
+      <button class="back-btn" id="timeBack" type="button"><span>←</span> Back to menu</button>
+    </div>
+
+    <div class="timeslot-card" id="timeslotCard">
+      <h1 class="checkout-title">Choose your pickup time</h1>
+      <div class="timeslot-switch" role="tablist">
+        <button type="button" class="shift-btn active" id="shift1Btn">SFS 1</button>
+        <button type="button" class="shift-btn" id="shift2Btn">SFS 2</button>
+        <button type="button" class="shift-btn" id="gasBtn">GAS</button>
+      </div>
+      <div class="timeslot-grid" id="timeslotGrid"></div>
+      <p class="timeslot-note hidden" id="timeslotNote"></p>
+      <p class="field-error" id="timeslotError"></p>
+      <button class="enter-btn" id="confirmTimeslotBtn" type="button">Continue to checkout <span class="arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKOUT / PAYMENT PAGE ============ -->
+<section class="page" id="page-checkout">
+  <div class="checkout-wrap">
+    <div class="menu-topbar">
+      <button class="back-btn" id="checkoutBack" type="button"><span>←</span> Back to menu</button>
+    </div>
+
+    <div id="checkoutSummary">
+      <h1 class="checkout-title">Your order</h1>
+      <p class="timeslot-selected" id="selectedTimeDisplay">Pickup time: <strong>Not selected</strong></p>
+      <div class="order-list" id="orderList"></div>
+
+      <div class="order-total-row">
+        <span>Total</span>
+        <span id="orderTotal">₹0</span>
+      </div>
+
+      <p class="order-error" id="orderError"></p>
+
+      <div class="pay-box">
+        <h2>Scan &amp; pay</h2>
+        <p class="pay-hint">Scan with GPay, PhonePe, or Paytm, pay the amount shown, then tap confirm.</p>
+        <img class="qr-img" src="assets/qr-code.jpg" alt="UPI payment QR code">
+        <p class="pay-amount">Pay <strong id="payAmount">₹0</strong></p>
+        <button class="enter-btn" id="confirmPaidBtn" type="button" disabled>I've completed the payment</button>
+        <p class="pay-disclaimer">Tapping confirm marks the order paid on trust — it isn't verified automatically. See README.md for hooking up a real payment gateway.</p>
+      </div>
+    </div>
+
+    <div id="checkoutConfirmation" class="confirm-wrap">
+      <div class="confirm-card">
+        <div class="confirm-check">✓</div>
+        <h1>Order placed</h1>
+        <p>Show this order ID at the counter to collect your food.</p>
+        <p class="order-id" id="confirmOrderId">—</p>
+        <p class="confirm-total" id="confirmTotal"></p>
+        <button class="ghost-btn ghost-btn--dark" id="newOrderBtn" type="button">Order something else</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- floating cart bar -->
+<div class="cart-bar" id="cartBar">
+  <span id="cartSummary">0 items · ₹0</span>
+  <button class="cart-checkout" id="cartCheckout" type="button">Checkout →</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

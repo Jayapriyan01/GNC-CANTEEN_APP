@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Demo Staff",
+    "email": "staff@flasho.com",
+    "role": "manager",
+    "passwordHash": "$2b$10$M7o5hI4vVxW9YeRGS.zZleEvElKhIULJd4ukP2FV2OYcY54ZHNRsW",
+    "createdAt": "2026-07-29T05:32:44.379Z"
+  },
+  {
+    "name": "Admin Staff",
+    "email": "admin@flasho.com",
+    "role": "admin",
+    "passwordHash": "$2b$10$5rOPTc8KHjbB991ucCijfOwVTXo1qnKKQpaAQpHgZ5Cqe7JGm5wBy",
+    "createdAt": "2026-07-29T05:32:44.442Z"
+  },
+  {
+    "name": "Amrit's Cafe",
+    "email": "amrit123@gmail.com",
+    "role": null,
+    "passwordHash": "$2b$10$QkbipoQtwnz5Iy.iSnpxwOU8ksClrV0aSKfT1mA8FKIStRoRKo6CW",
+    "createdAt": "2026-08-02T15:44:50.169Z"
+  },
+  {
+    "name": "Bhojan Owner",
+    "email": "bhojan-owner@flasho.com",
+    "role": "owner",
+    "canteenKey": "bhojan",
+    "passwordHash": "$2b$10$Hsrr9KT4UKLa4wIvJ567NOheYVOcUVP2hiGwA0pp50EBjS.VnNFce",
+    "createdAt": "2026-08-02T16:06:18.832Z"
+  },
+  {
+    "name": "AMRIT Owner",
+    "email": "amrit-owner@flasho.com",
+    "role": "owner",
+    "canteenKey": "amrit",
+    "passwordHash": "$2b$10$HEUqJtH7Yx.jLV9pSeVruuT3qb7N5PTptzOa0ApEn7axnCfmR5aLy",
+    "createdAt": "2026-08-02T16:06:19.013Z"
+  },
+  {
+    "name": "CoffeeKudi Owner",
+    "email": "coffeekudi-owner@flasho.com",
+    "role": "owner",
+    "canteenKey": "coffeekudi",
+    "passwordHash": "$2b$10$rN6Boo06E5SyPdkrZiEQM.1YU10/7BJL7OXNEFO9LgqRDSap6JpvO",
+    "createdAt": "2026-08-02T16:06:19.189Z"
+  },
+  {
+    "name": "Sai Sri Owner",
+    "email": "saisri-owner@flasho.com",
+    "role": "owner",
+    "canteenKey": "saisri",
+    "passwordHash": "$2b$10$mj.Ea/5D6h0lbFCcmUQQYu1SvhheGZ4ozX52h3DNfMYznHbCvNXRa",
+    "createdAt": "2026-08-02T16:06:19.376Z"
+  },
+  {
+    "name": "Bhojan Admin",
+    "email": "bhojan@gnc.com",
+    "role": "canteen_admin",
+    "canteenKey": "bhojan",
+    "passwordHash": "$2b$10$aefU/jMelTbcT7gHSuJToe9KuV1VC6mLU.viaGnaUzqeiu70VCkTO",
+    "createdAt": "2026-08-02T17:25:37.406Z"
+  },
+  {
+    "name": "AMRIT Admin",
+    "email": "amrit@gnc.com",
+    "role": "canteen_admin",
+    "canteenKey": "amrit",
+    "passwordHash": "$2b$10$d5QEYi5JAnEwj1lxedgb.O4uncDmCXgOTPyfzol297/IMfbgZVpsi",
+    "createdAt": "2026-08-02T17:25:37.528Z"
+  },
+  {
+    "name": "CoffeeKudi Admin",
+    "email": "coffeekudi@gnc.com",
+    "role": "canteen_admin",
+    "canteenKey": "coffeekudi",
+    "passwordHash": "$2b$10$RI/drs/vFqbn1TgjF3aw0.Fz/bFOeIT2Mu9rI.4OC/yzTr7GAxSYG",
+    "createdAt": "2026-08-02T17:25:37.655Z"
+  },
+  {
+    "name": "SaiSri Admin",
+    "email": "saisri@gnc.com",
+    "role": "canteen_admin",
+    "canteenKey": "saisri",
+    "passwordHash": "$2b$10$REK/nyNgFp0Rq6QtY9CGM.kGjKS7431HgbldUKkaIzFIcX1ue2Ga2",
+    "createdAt": "2026-08-02T17:25:37.763Z"
+  }
+]
