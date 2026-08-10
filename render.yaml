@@ -1,6 +1,7 @@
 services:
   - type: web
     name: flasho-server
+    repo: https://github.com/Jayapriyan01/GNC-CANTEEN_APP.git
     env: node
     plan: free
     branch: main

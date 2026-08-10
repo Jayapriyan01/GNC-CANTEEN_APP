@@ -26,5 +26,12 @@
     "email": null,
     "passwordHash": "$2b$10$Uu9ChVJmnsx2OVsFNh4UH.eH98V.3SOi5wNUU1pzLIaoWQTGy3Odi",
     "createdAt": "2026-08-02T15:43:23.696Z"
+  },
+  {
+    "roll": "80830",
+    "name": "Rudresh",
+    "email": null,
+    "passwordHash": "$2b$10$zX4Y7fhtDM30qhjU9fWNWeVz8Vgq3JZ4TdRwuEWswyywhFbwyQjo.",
+    "createdAt": "2026-08-07T06:51:11.281Z"
   }
 ]

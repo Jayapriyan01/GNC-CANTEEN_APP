@@ -450,7 +450,7 @@ async function startServer() {
     await dbReady;
     await seedDemoAccounts();
     app.listen(PORT, '0.0.0.0', () => {
-      console.log(`Flasho server running at http://0.0.0.0:${PORT}`);
+      console.log(`GNC server running at http://0.0.0.0:${PORT}`);
     });
   } catch (err) {
     console.error('Failed to start server:', err);

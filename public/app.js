@@ -1,5 +1,5 @@
 /**
- * Flasho frontend
+ * GNC frontend
  * Talks to the backend at the same origin ("/api/...").
  * Start the backend first: cd server && npm install && npm start
  * then open http://localhost:4000
@@ -125,16 +125,16 @@ function updateAuthFields(view) {
   const forgotNameInput = document.getElementById('forgotName');
 
   if (loginIdentifier) {
-    loginIdentifier.placeholder = isStudent ? 'e.g. 21CS045' : 'e.g. staff@flasho.com';
+    loginIdentifier.placeholder = isStudent ? 'e.g. 21CS045' : 'e.g. staff@gnc.com';
     loginIdentifier.setAttribute('autocomplete', isStudent ? 'username' : 'email');
   }
   if (signupIdentifier) {
-    signupIdentifier.placeholder = isStudent ? 'e.g. 21CS045' : 'e.g. staff@flasho.com';
+    signupIdentifier.placeholder = isStudent ? 'e.g. 21CS045' : 'e.g. staff@gnc.com';
     signupIdentifier.setAttribute('autocomplete', isStudent ? 'username' : 'email');
   }
   if (forgotIdentifierLabel) forgotIdentifierLabel.textContent = isStudent ? 'Register no.' : 'Email';
   if (forgotIdentifier) {
-    forgotIdentifier.placeholder = isStudent ? 'e.g. 21CS045' : 'e.g. staff@flasho.com';
+    forgotIdentifier.placeholder = isStudent ? 'e.g. 21CS045' : 'e.g. staff@gnc.com';
     forgotIdentifier.setAttribute('autocomplete', isStudent ? 'username' : 'email');
   }
 
@@ -573,6 +573,12 @@ function updateCartBar() {
   cartBar.classList.toggle('show', totalItems > 0);
 }
 
+function resetCart() {
+  Object.keys(cart).forEach(k => delete cart[k]);
+  updateCartBar();
+  buildMenus();
+}
+
 function renderOwnerOrders(orders) {
   if (!ownerOrderList) return;
   ownerOrderList.innerHTML = '';
@@ -771,7 +777,7 @@ async function confirmTimeslot() {
 async function createOrder() {
   const items = Object.values(cart).map(c => ({ name: c.name, price: c.price, qty: c.qty, canteenKey: c.canteenKey }));
   const canteenKeys = [...new Set(Object.values(cart).map(c => c.canteenKey))];
-  const canteenLabel = canteenKeys.length === 1 ? CANTEEN_LABELS[canteenKeys[0]] : 'Flasho (multiple canteens)';
+  const canteenLabel = canteenKeys.length === 1 ? CANTEEN_LABELS[canteenKeys[0]] : 'GNC (multiple canteens)';
   const canteenKey = canteenKeys.length === 1 ? canteenKeys[0] : null;
 
   try {
@@ -795,7 +801,7 @@ async function createOrder() {
     currentOrderId = null;
     confirmPaidBtn.disabled = true;
     confirmPaidBtn.textContent = "I've completed the payment";
-    orderErrorEl.textContent = err.message || "Couldn't reach the Flasho server. Make sure the backend is running (see README.md), then reopen checkout.";
+    orderErrorEl.textContent = err.message || "Couldn't reach the GNC server. Make sure the backend is running (see README.md), then reopen checkout.";
     orderErrorEl.classList.add('show');
   }
 }
@@ -820,8 +826,7 @@ confirmPaidBtn.addEventListener('click', async () => {
     checkoutConfirmationEl.style.display = 'block';
 
     // clear cart for next order
-    Object.keys(cart).forEach(k => delete cart[k]);
-    updateCartBar();
+    resetCart();
     currentOrderId = null;
   } catch (err) {
     orderErrorEl.textContent = 'Could not confirm the payment with the server. Please try again.';
@@ -862,7 +867,12 @@ if (gasBtn) {
   });
 }
 document.getElementById('confirmTimeslotBtn').addEventListener('click', confirmTimeslot);
-document.getElementById('newOrderBtn').addEventListener('click', () => showPage('page-home'));
+document.getElementById('newOrderBtn').addEventListener('click', () => {
+  resetCart();
+  selectedShift = 'sfs1';
+  selectedSlot = null;
+  showPage('page-home');
+});
 
 /* ---------------------------------------------------------
    TIMER
@@ -875,7 +885,9 @@ function renderTimer() {
   const mins = Math.floor((timerSeconds % 3600) / 60);
   const secs = timerSeconds % 60;
   const displayMinutes = hrs > 0 ? `${hrs}h ${String(mins).padStart(2, '0')}m` : `${mins} min`;
-  minutesLeftEl.textContent = displayMinutes;
+  if (minutesLeftEl) {
+    minutesLeftEl.textContent = displayMinutes;
+  }
   const hhmmss = `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   mmssEls.forEach(el => el.textContent = hhmmss);
 }
