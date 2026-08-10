@@ -6,5 +6,5 @@ services:
     plan: free
     branch: main
     root: server
-    buildCommand: cd server && npm install
-    startCommand: cd server && npm start
+    buildCommand: npm install
+    startCommand: npm start
